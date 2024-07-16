@@ -1,38 +1,231 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  text-decoration: none;
+  list-style: none;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.contact_body {
+  width: 100%;
+  height: 100vh;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav {
+  width: 100%;
+  height: 80px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+
+  box-shadow: -1px 6px 7px 0px rgba(168, 156, 168, 1);
+}
+.Searchbar {
+  display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.Search {
+  height: 40px;
+  width: 300px;
+  border-radius: 10px;
+  font-size: 18px;
+  border: 2px solid rgb(177, 173, 173);
+  outline: none;
+  position: relative;
+  cursor: pointer;
+  padding-left: 15px;
+  color: black;
+}
+.Search::placeholder {
+  font-size: 18px;
+  padding-left: 12px;
+  color: black;
+}
+.SearchIcon {
+  position: absolute;
+  right: 60px;
+  cursor: pointer;
+}
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  font-weight: bold;
+  font-size: 25px;
+}
+.titleicon {
+  /* width: 50px;
+  height: 50px; */
+  font-size: 40px !important;
+  color: rgb(15, 145, 232);
+}
+.addicon {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  font-size: 60px !important;
+  color: rgb(68, 142, 232);
+
+  /* z-index: 5; */
+}
+body {
+  padding: 20px;
+}
+.sidebar {
+  background: white;
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+
+  align-content: center;
+  font-size: 16px;
+  transition: 0.3s all ease-in;
+  cursor: pointer;
+}
+.sidebar:hover {
+  background: rgb(160, 207, 223);
+  transition: 0.3s all ease-in;
+}
+.sidebar:active {
+  background: rgb(6, 171, 225);
 }
 
-.App-link {
-  color: #61dafb;
+.sideicons {
+  color: rgb(15, 145, 232) !important;
+  display: flex;
+  gap: 10px;
+  margin-left: 12px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.sidebars {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 12px;
+}
+.sideicons p {
+  color: black;
+  font-weight: bold;
+}
+.minibody {
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
+  overflow: hidden;
+  gap: 8px;
+  width: 1110px;
+  height: 465px;
+  background: white;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: -4px -4px 5px 0px rgba(140, 129, 140, 1);
+}
+.minibody p {
+  color: rgb(129, 120, 120);
+  font-weight: bold;
+}
+.empty {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, 50%);
+}
+@media (min-width: 0px) and (max-width: 480px) {
+  body {
+    padding: none;
   }
-  to {
-    transform: rotate(360deg);
+  nav {
+    justify-content: space-around;
+    flex-direction: column;
+    gap: 25px;
+  }
+  .sidebarcontainer {
+    display: none;
+  }
+  .minibody {
+    margin-top: 30px;
+    width: 370px;
+    min-height: 400px;
+    overflow: hidden;
+    gap: 8px;
+    background: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    border-radius: 12px;
+
+    box-shadow: none;
+  }
+  .Search {
+    min-width: 370px;
+  }
+  .addicon {
+    right: 25px;
+    bottom: 25px;
+  }
+  .titleicon {
+    /* width: 50px;
+    height: 50px; */
+    font-size: 40px !important;
+    color: rgb(15, 145, 232);
+  }
+  .empty {
+    font-size: 8px;
+  }
+}
+@media (min-width: 481px) and (max-width: 1024px) {
+  body {
+    padding: none;
+  }
+  .empty {
+    font-size: 15px;
+  }
+  nav {
+    justify-content: space-around;
+    flex-direction: column;
+    gap: 25px;
+  }
+  .sidebarcontainer {
+    display: none;
+  }
+  .minibody {
+    margin-top: 30px;
+    width: 700px;
+    min-height: 400px;
+    overflow: hidden;
+    gap: 8px;
+    background: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    border-radius: 12px;
+
+    box-shadow: none;
+  }
+  .Search {
+    min-width: 700px;
+    height: 60px;
+  }
+  .addicon {
+    right: 25px;
+    bottom: 25px;
+  }
+  .titleicon {
+    /* width: 50px;
+    height: 50px; */
+    font-size: 40px !important;
+    color: rgb(15, 145, 232);
   }
 }

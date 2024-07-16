@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.Modeloverlay {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  background: rgb(0, 0, 0, 0.7);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body {
+  padding: 0;
+}
+.modelContainer {
+  width: 290px;
+  height: 190px;
+  background: white;
+  border-radius: 10px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.xbtn {
+  color: white;
+  width: 40px;
+  height: 40px;
+  background-color: black;
+  border: none;
+  outline: none;
+  font-size: 25px;
+  border-radius: 50%;
+  text-align: center;
+  position: absolute;
+  right: -40px;
+  top: -40px;
+}
+.xbtn:hover {
+  background: white;
+  color: black;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+/* .inputbox {
+  width: 350px;
+  height: 40px;
+  padding: 15px;
+  font-size: 18px;
+  cursor: pointer;
+} */
+form input {
+  width: 280px;
+  height: 40px;
+  padding-left: 15px;
+  font-size: 18px;
+  color: black;
+  border-radius: 12px;
+  cursor: pointer;
+  outline: none;
+  border: 2px solid black;
+  /* &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+  } */
+}
+.savebtn {
+  width: 120px;
+  height: 40px;
+  border-radius: 5px;
+  background: black;
+  border: 2px solid transparent;
+  outline: none;
+  color: white;
+  font-size: 20px;
+}
+.savebtn:hover {
+  background: transparent;
+  color: black;
+  border: 2px solid black;
+}

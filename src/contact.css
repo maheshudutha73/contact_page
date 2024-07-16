@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 1000px;
+  height: 70px;
+  background: whitesmoke;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 8px;
+}
+.name,
+.number {
+  width: 100px;
+  font-size: 20px;
+  font-weight: 400;
+  color: black;
+}
+.editbtn {
+  background: white;
+  font-size: 40px !important;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  padding: 5px;
+  color: grey;
+  outline: none;
+  transition: all 0.3s ease-in;
+}
+.editbtn:hover {
+  background: grey;
+  color: white;
+  transition: all 0.3s ease-in;
+}
+.deletebtn {
+  background: red;
+  font-size: 40px !important;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  padding: 5px;
+  color: white;
+  outline: none;
+  transition: all 0.3s ease-in;
+}
+.deletebtn:hover {
+  background: white;
+  color: red;
+  transition: all 0.3s ease-in;
+}
+.contacticon {
+  font-size: 50px !important;
+  color: rgb(244, 100, 100);
+}
+.names {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+}
+@media (min-width: 0px) and (max-width: 480px) {
+  .names {
+    flex-direction: column;
+  }
+  .container {
+    width: 100%;
+    gap: 6px;
+  }
+  .name,
+  .number {
+    width: 100px;
+    font-size: 15px;
+    font-weight: 400;
+    color: black;
+  }
+}
+@media (min-width: 481px) and (max-width: 1024px) {
+  .names {
+    flex-direction: column;
+  }
+  .container {
+    width: 100%;
+    gap: 6px;
+  }
+  .name,
+  .number {
+    width: 100px;
+    font-size: 20px;
+    font-weight: 400;
+    color: black;
+  }
+}
